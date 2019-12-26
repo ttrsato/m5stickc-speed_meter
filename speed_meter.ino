@@ -25,7 +25,7 @@ void dispSpeed(int s)
 
 // Monitor stop state
 // If the status is stopped, clear the speed
-void IRAM_ATTR checkStopState()
+void IRAM_ATTR checkStopState_Handler()
 {
   if (state == STOP) {
     speed = 0;
@@ -51,7 +51,7 @@ void setup() {
   // Timer setting
   // Monitor stop state
   tim0 = timerBegin(0, 80, true); // two second
-  timerAttachInterrupt(tim0, &checkStopState, true);
+  timerAttachInterrupt(tim0, &checkStopState_Handler, true);
   timerAlarmWrite(tim0, (1 * 1000000), true); // 1sec
   timerAlarmEnable(tim0);
  }
