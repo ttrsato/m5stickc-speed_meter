@@ -14,6 +14,6 @@ Reed switch should be close to the magnet<br>
 <img src="https://user-images.githubusercontent.com/17703236/71455591-08f6cd00-27d9-11ea-9dfb-88ba351523a9.jpeg" width=300>
 # Comment
 This program is compiled in Arduino IDE environment.
-You need to set your bicycle circumference length to variable 'circumference'.
+You need to set your bicycle circumference length to variable 'circumference' to get collect result.
 The content of the program is simple. Just use the GPIO interrupt to measure the time the magnet passes and calculate the speed. In addition, there is code to detect a stop condition.
 Sending speed information to another device via WiFi or Bluetooth might be useful. Compare the speed between this method and calculation using accelerometer results must be interesting. Also, extend the wire between M5StickC and reed switch, then put M5StickC on the handle might be practical.
